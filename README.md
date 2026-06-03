@@ -5,7 +5,7 @@
 コンソール（キーボード）からの入力を扱う 20 個のサンプルを収録しています。
 
 ## NotebookLM 補足資料
-https://notebooklm.google.com/notebook/fc30f692-9b4d-473d-a83c-246a7b16c92a
+-
 
 ## 必要環境
 
