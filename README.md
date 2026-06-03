@@ -1,7 +1,8 @@
-# JecJavaTemplate
+# JecJava26cmScannerDemo
 
-Java 基礎を学ぶための授業用テンプレートプロジェクトです。
+`java.util.Scanner` の使い方を基本から応用まで学ぶための授業用プロジェクトです。
 ビルドツール不要で、IntelliJ IDEA からすぐに実行できます。
+コンソール（キーボード）からの入力を扱う 20 個のサンプルを収録しています。
 
 ## NotebookLM 補足資料
 https://notebooklm.google.com/notebook/fc30f692-9b4d-473d-a83c-246a7b16c92a
@@ -21,29 +22,70 @@ https://notebooklm.google.com/notebook/fc30f692-9b4d-473d-a83c-246a7b16c92a
 
 IntelliJ IDEA 上で各 Java ファイルの `main` メソッドを右クリック → **Run** で実行できます。
 
+> **注意:** Scanner はキーボード入力を待つため、必ずコンソールから実行してください。
+
 コマンドラインで実行する場合:
 ```bash
-# コンパイル（例: Main.java）
-javac src/Main.java
+# コンパイル（例: Sample01.java）
+javac src/Sample01.java
 
 # 実行
-java -cp src Main
+java -cp src Sample01
 ```
 
 ## プロジェクト構成
 
 ```
 src/
-├── Main.java           # Hello World
-├── Sample01.java       # サンプルコード 01
-├── Sample02.java       # サンプルコード 02
-├── Literal03a.java     # リテラル解説 03a
-├── Literal03b.java     # リテラル解説 03b
-└── Ex0101.java         # 演習問題 01-01
+├── Sample01.java   # 文字列を 1 行入力する（nextLine）
+├── Sample02.java   # 整数を入力する（nextInt）
+├── Sample03.java   # 小数を入力する（nextDouble）
+├── Sample04.java   # 単語を入力する（next）
+├── Sample05.java   # 複数の値を一度に入力する
+├── Sample06.java   # nextInt() の後の nextLine() 問題と対策
+├── Sample07.java   # 入力が整数か確認する（hasNextInt）
+├── Sample08.java   # 真偽値を入力する（nextBoolean）
+├── Sample09.java   # 複数行をループで入力する（hasNextLine）
+├── Sample10.java   # 合計と平均を求める
+├── Sample11.java   # try-with-resources で自動的に閉じる
+├── Sample12.java   # 区切り文字を変更する（useDelimiter）
+├── Sample13.java   # 正しい値まで再入力させる（バリデーション）
+├── Sample14.java   # メニュー選択（switch）
+├── Sample15.java   # 数当てゲーム（Random + Scanner）
+├── Sample16.java   # 簡易電卓
+├── Sample17.java   # 文字列を Scanner で解析する
+├── Sample18.java   # 終了ワードまで入力を受け付ける（番兵）
+├── Sample19.java   # 入力フォーム（複数項目）
+└── Sample20.java   # 成績判定アプリ（総合演習）
 ```
 
 各ファイルは `public static void main(String[] args)` を持つ独立したプログラムです。
 外部ライブラリは使用せず、Java 標準ライブラリのみで動作します。
+
+### サンプル一覧
+
+| # | ファイル | テーマ | 主なメソッド |
+|---|---------|--------|-------------|
+| 01 | `Sample01.java` | 文字列を 1 行入力する | `nextLine()` |
+| 02 | `Sample02.java` | 整数を入力する | `nextInt()` |
+| 03 | `Sample03.java` | 小数を入力する | `nextDouble()` |
+| 04 | `Sample04.java` | 単語を入力する | `next()` |
+| 05 | `Sample05.java` | 複数の値を一度に入力する | `nextInt()` × 複数 |
+| 06 | `Sample06.java` | `nextInt()` 後の `nextLine()` 問題と対策 | `nextInt()` + `nextLine()` |
+| 07 | `Sample07.java` | 入力が整数か確認する | `hasNextInt()` |
+| 08 | `Sample08.java` | 真偽値を入力する | `nextBoolean()` |
+| 09 | `Sample09.java` | 複数行をループで入力する | `hasNextLine()` |
+| 10 | `Sample10.java` | 合計と平均を求める | `nextInt()` + ループ |
+| 11 | `Sample11.java` | try-with-resources で自動的に閉じる | `try(Scanner ...)` |
+| 12 | `Sample12.java` | 区切り文字を変更する | `useDelimiter()` |
+| 13 | `Sample13.java` | 正しい値まで再入力させる | `hasNextInt()` + ループ |
+| 14 | `Sample14.java` | メニュー選択 | `nextInt()` + `switch` |
+| 15 | `Sample15.java` | 数当てゲーム | `Random` + `nextInt()` |
+| 16 | `Sample16.java` | 簡易電卓 | `nextDouble()` + `next()` |
+| 17 | `Sample17.java` | 文字列を Scanner で解析する | `new Scanner(String)` |
+| 18 | `Sample18.java` | 終了ワードまで入力を受け付ける | `hasNextInt()` + 番兵 |
+| 19 | `Sample19.java` | 入力フォーム（複数項目） | `nextLine()`/`nextInt()`/`nextDouble()` |
+| 20 | `Sample20.java` | 成績判定アプリ（総合演習） | 総合 |
 
 ### ファイル命名規則
 

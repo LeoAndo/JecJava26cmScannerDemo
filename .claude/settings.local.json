@@ -4,7 +4,13 @@
       "Bash(grep:*)",
       "WebSearch",
       "Bash(git log:*)",
-      "Skill(load-rules:*)"
+      "Skill(load-rules:*)",
+      "Bash(javac -d /tmp/scannerbuild src/Sample*.java)",
+      "Read(//tmp/**)",
+      "Bash(java Sample06)",
+      "Bash(java Sample12)",
+      "Bash(java Sample18)",
+      "Bash(java Sample20)"
     ],
     "deny": []
   }

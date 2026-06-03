@@ -3,6 +3,9 @@
 このファイルは AI エージェント向けの **Single Source of Truth** です。
 コード生成・レビュー時に必ず従ってください。
 
+本リポジトリは `java.util.Scanner` によるコンソール入力を、基本から応用まで
+学ぶための授業用デモプロジェクト（`Sample01`〜`Sample20`）です。
+
 ## AI エージェントへの指示
 
 - コードは授業教材として使用するため、**シンプルさ・可読性を最優先**すること。
@@ -19,11 +22,14 @@
 
 ```
 src/
-├── Main.java           # Hello World（エントリーポイント）
-├── SampleXX.java       # サンプルコード
-├── LiteralXXx.java     # リテラル解説
-└── ExXXXX.java         # 演習問題
+├── Sample01.java   # 文字列を 1 行入力する（nextLine）
+├── Sample02.java   # 整数を入力する（nextInt）
+├── ...             # （基本編〜応用編〜実践編）
+└── Sample20.java   # 成績判定アプリ（総合演習）
 ```
+
+- 現在のソースは `java.util.Scanner` のサンプル `Sample01`〜`Sample20` で構成。
+- サンプル一覧の詳細は `README.md` / `TUTORIAL.md` を参照。
 
 ## ビルド・テスト・開発コマンド
 
